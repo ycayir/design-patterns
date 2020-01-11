@@ -17,6 +17,9 @@ public class History {
     }
 
     public EditorState pop() {
-        return this.states.pop();
+        if (!states.empty()) {
+            return this.states.pop();
+        }
+        return null;
     }
 }
